@@ -3,7 +3,7 @@
 ##usersテーブル
 
 | Column              | Type   | Options                    |
-| nicname             | string | null: false, unique: true  |
+| nickname             | string | null: false, unique: true  |
 | email               | string | null: false, unique: true  |
 | encrypted_password  | string | null: false                |
 | last_name           | string | null: false                |
