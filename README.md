@@ -40,6 +40,7 @@ has_one :order
 
 belongs_to :user
 belongs_to :item
+has_one :payment
 
 ##paymentsテーブル
 | Column           | Type       | Options                        |
