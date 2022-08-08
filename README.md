@@ -12,6 +12,10 @@
 | first_name_kana     | string | null: false                |
 | birthday            | date   | null: false                |
 
+has_many :items
+has_many :orders
+
+
 
 ##itemsテーブル
 | Column           | Type       | Options                        |
@@ -25,22 +29,29 @@
 | shipping_date_id | integer    | null: false                    |
 | price            | integer    | null: false                    |
 
+belongs_to :user
+has_one :order
+
 
 ##ordersテーブ
 | Column           | Type       | Options                        |
 | user             | references | null: false, foreign_key: true |
 | item             | references | null: false, foreign_key: true |
 
+belongs_to :user
+belongs_to :item
 
 ##paymentsテーブル
 | Column           | Type       | Options                        |
 | order            | references | null: false, foreign_key: true |
 | postcode         | string     | null: false                    |
 | prefecture_id    | integer    | null: false                    |
-| city             | string     | null: false, foreign_key: true |
-| block	           | string     | null: false, foreign_key: true |
-| building         | string	    |foreign_key: true               |
-| phone_number     | string     | null: false, foreign_key: true |
+| city             | string     | null: false                    |
+| block	           | string     | null: false                    | 
+| building         | string	    |                                |
+| phone_number     | string     | null: false                    |
+
+belongs_to :order
 
 
 
