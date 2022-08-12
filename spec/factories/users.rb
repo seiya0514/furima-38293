@@ -2,7 +2,6 @@ FactoryBot.define do
   factory :user do
     nickname { 'test' }
     email { 'test@test1234' }
-    # ランダムで生成する際、英数字になるよう'1a'追加
     password { 'aaa111' }
     password_confirmation { password }
     last_name { '山田' }
