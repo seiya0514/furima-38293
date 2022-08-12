@@ -2,6 +2,8 @@ require 'rails_helper'
 
 RSpec.describe OrderForm, type: :model do
   before do
+    @user = FactoryBot.build(:user)
+    @item = FactoryBot.create(:item)
     @order_form = FactoryBot.build(:order_form)
     sleep 0.1
   end
