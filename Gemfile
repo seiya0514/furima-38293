@@ -76,3 +76,6 @@ end
 gem 'faker'
 
 gem "aws-sdk-s3", require: false
+
+gem 'slim-rails'
+gem 'html2slim'
